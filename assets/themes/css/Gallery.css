@@ -1,0 +1,21 @@
+fieldset {
+    border-color: black;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.upload-area {
+    border: 2px dashed #777;
+    height: 350px;
+    width: 100%;
+}
+
+.upload-area-hover {
+    border-color: #000;
+    color: #000;
+}
+
+#uploaded-files img{
+    max-width: 100px;
+    margin: 10px;
+}

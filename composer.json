@@ -1,0 +1,32 @@
+{
+    "name": "xdxddxd/spin360",
+    "description": "spin360",
+    "minimum-stability": "stable",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "xdxddxd",
+            "email": "ytxd.gamer@gmail.com",
+            "role": "Author"
+        }
+    ],
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Source\\": "source/"
+        },
+        "files": [
+            "source/Config.php"
+        ]
+    },
+    "require": {
+        "coffeecode/router": "1.0.*",
+        "coffeecode/datalayer": "^1.1",
+        "coffeecode/optimizer": "2.0.*",
+        "league/plates": "^3.4",
+        "coffeecode/uploader": "1.0.*"
+    }
+}
