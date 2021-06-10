@@ -9,7 +9,7 @@ class Product extends DataLayer
 
     public function __construct()
     {
-        parent::__construct('products', ["name", "value", "qtd", "marca_id", "subcategoria_id", "empresa_id"], 'id', true);
+        parent::__construct('produto', ["id_usuario"], 'id', true);
     }
 
 }

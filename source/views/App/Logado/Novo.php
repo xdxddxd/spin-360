@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="<?php echo URL_BASE; ?>/assets/themes/css/Galeria.css">
-<script src="<?php echo URL_BASE; ?>/assets/themes/js/Galeria.js"></script>
-<div class="Galeria">
+<link rel="stylesheet" href="<?php echo URL_BASE; ?>/assets/themes/css/Novo.css">
+<script src="<?php echo URL_BASE; ?>/assets/themes/js/Novo.js"></script>
+<div class="Novo">
     <!-- Main Content -->
     <div id="content">
 
@@ -19,21 +19,21 @@
 
                 <div class="col-md-12">
 
-                    <form>
+                    <form onsubmit="create(); return false;">
 
                         <div class="row">
 
                             <div class="form-group col-md-2">
                                 <label for="placa">Placa</label>
-                                <input type="text" class="form-control form-control-user" id="placa" placeholder="ABC1234">
+                                <input type="text" class="form-control form-control-user" id="placa" placeholder="ABC1234" maxlength="7">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="renavam">Renavam</label>
-                                <input type="text" class="form-control form-control-user" id="renavam" placeholder="98215885784">
+                                <input type="text" class="form-control form-control-user" id="renavam" placeholder="98215885784" maxlength="11">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="chassi">Chassi</label>
-                                <input type="text" class="form-control form-control-user" id="chassi" placeholder="9BW ZZZ377 VT 004251">
+                                <input type="text" class="form-control form-control-user" id="chassi" placeholder="9BW ZZZ377 VT 004251" maxlength="21">
                             </div>
                             <div class="form-group col-md-2">
                                 <label for="modo">Modo</label>

@@ -1,5 +1,5 @@
 var controllerapi = "https://localhost/spin-360/WS",
-    logo = "https://localhost/spin-360/assets/Icons/favicon.png"
+  logo = "https://localhost/spin-360/assets/Icons/favicon.png";
 
 async function createNotification(title, message, id) {
   if (document.getElementById(id)) {
@@ -14,7 +14,7 @@ async function createNotification(title, message, id) {
       id +
       '" class="toast fade show wow bounceInRight">' +
       '<div class="toast-header">' +
-      '<img src="'+logo+'" class="rounded mr-2" alt="Tabacaria Delivery">' +
+      '<img src="' + logo + '" class="rounded mr-2" alt="Car View">' +
       '<strong class="mr-auto">' +
       title +
       "</strong>" +

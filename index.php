@@ -52,96 +52,11 @@ $router->group('WS');
 $router->post("/Dashboard/Info", "Dashboard:Info");
 
 /**
- * @return EMPRESA
- * @group WS
- */
-$router->post("/Empresa/Cadastro", "Empresa:Cadastro");
-
-/**
- * @return CLIENTE
- * @group WS
- */
-$router->post("/Cliente/Cadastro", "Cliente:Cadastro");
-$router->post("/Cliente/Consulta", "Cliente:Consultar");
-
-/**
- * @return SubCategoria
- * @group WS
- */
-//$router->post("/Sub/Categoria/Cadastro", "SubCategoria:Cadastro");
-$router->post("/Sub/Categoria/Consulta", "SubCategoria:Consultar");
-
-/**
- * @return Marca
- * @group WS
- */
-//$router->post("/Marca/Cadastro", "Brand:Cadastro");
-$router->post("/Marca/Consulta", "Brand:Consultar");
-
-/**
- * @return PERFIL
- * @group WS
- */
-$router->post("/Perfil/Senha/Atualizar", "Perfil:PassUpdate");
-$router->post("/Perfil/Foto/Atualizar", "Perfil:PicUpdate");
-
-/**
- * @return User
- * @group WS
- */
-$router->post("/SystemUser/Cadastro", "Usuario:Cadastro");
-$router->post("/SystemUser/Consulta", "Usuario:Consultar");
-$router->post("/SystemUser/Block", "Usuario:Block");
-
-/**
- * @return PRODUTO
- * @group WS
- */
-$router->post("/Produto/Cadastro", "Produto:Cadastrar");
-$router->post("/Produto/Consultar", "Produto:Consultar");
-
-/**
- * @return AcessLevel
- * @group WS
- */
-$router->post("/Cargo/Consulta", "Cargo:Consulta");
-
-/**
- * @return SESSION
- * @group WS
- */
+* @return Session
+* @group WS
+*/
 $router->post("/Session/Login", "Session:Login");
-$router->post("/Session/Logout", "Session:Logout");
-$router->post("/Session/Verify", "Session:Verify");
-
-/**
- * @return Caixa
- * @group WS
- */
-$router->post("/Caixa/Toogle", "Caixa:Toogle");
-$router->post("/Caixa/isOpen", "Caixa:isOpen");
-$router->post("/Caixa/Produtos", "Caixa:Produtos");
-$router->post("/Caixa/Abrir", "Caixa:Abrir");
-$router->post("/Caixa/Fechar", "Caixa:Fechar");
-
-/**
- * @return Cart
- * @group WS
- */
-$router->post("/Cart/Add", "Cart:Add");
-$router->post("/Cart/Get", "Cart:Get");
-$router->post("/Cart/Atualizar", "Cart:Atualizar");
-$router->post("/Cart/Remover", "Cart:Remover");
-$router->post("/Cart/Finalizar", "Cart:Finalizar");
-$router->post("/Cart/CalcRetorno", "Cart:CalcRetorno");
-
-/**
- * @return Sells
- * @group WS
- */
-$router->post("/Sells/Historico", "Sells:Historico");
-$router->post("/Sells/ProductList", "Sells:ProductList");
-$router->post("/Sells/Cancelar", "Sells:Cancelar");
+$router->post("/Session/Logout", "Session:LogOut");
 
 /*
 * Erro

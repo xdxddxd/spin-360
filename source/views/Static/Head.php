@@ -3,6 +3,9 @@
 
 <link rel="icon" href="<?php echo URL_BASE ?>/assets/Icons/favicon.png">
 
+<!-- Manifest -->
+<link rel="manifest" href="manifest.json">
+
 <!-- META -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
