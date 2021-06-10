@@ -29,22 +29,15 @@
 
         <!-- Heading -->
         <div class="sidebar-heading">
-            Novo
+            Produtos
         </div>
 
         <!-- Nav Item - PDV -->
         <li class="nav-item">
-            <a class="nav-link" href="<?php echo URL_BASE; ?>/Galeria">
-                <i class="fas fa-fw fa-images"></i>
-                <span>Galeria</span>
+            <a class="nav-link" href="<?php echo URL_BASE; ?>/Novo">
+                <i class="fas fa-fw fa-plus-circle"></i>
+                <span>Novo</span>
             </a>
-        </li>
-
-        <!-- Nav Item - Pedidos -->
-        <li class="nav-item">
-            <a class="nav-link" href="<?php echo URL_BASE; ?>/New/Capture">
-                <i class="fas fa-fw fa-sync"></i>
-                <span>Captura</span></a>
         </li>
 
         <!-- Divider -->

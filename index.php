@@ -20,8 +20,8 @@ $router->namespace("Source\Controllers");
 if(isset($_SESSION['ADMIN']['USER'])) {
     $router->group(null);
     $router->get("/", "App:Dashboard");
+    $router->get('/Novo', 'App:Novo');
     $router->get("/Dashboard", "App:Dashboard");
-    $router->get("/Galeria", "App:Galeria");
     $router->get('/Cadastro', 'App:Cadastro');
     $router->get('/Uploader', 'App:Test');
     $router->get('/Capturar', 'App:Capturar');

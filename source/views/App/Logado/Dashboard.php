@@ -54,7 +54,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>                 </div>
+                        </div>
+                    </div>
 
                     <!-- Créditos Disponiveis -->
                     <div class="col-xl-4 col-md-6 mb-4">
@@ -103,37 +104,41 @@
                             <!-- Card Body -->
                             <div class="card-body">
 
-                            <div class="col-xl-2 col-md-6 mb-4">
-                                <div class="card border-left-success shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">ABC1234</div>
-                                                <div class="h5 mb-0 font-weight-bold text-gray-800">Ford Focus</div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-check-circle fa-2x text-success"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                <div class="row">
 
-                            <div class="col-xl-2 col-md-6 mb-4">
-                                <div class="card border-left-success shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Ford Focus</div>
-                                                <div class="h5 mb-0 font-weight-bold text-gray-800">ABC1234</div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-check-circle fa-2x text-success"></i>
+                                    <div class="col-xl-4 col-md-6 mb-4">
+                                        <div class="card border-left-success shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">ABC1234</div>
+                                                        <div class="h5 mb-0 font-weight-bold text-gray-800">Ford Focus</div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-check-circle fa-2x text-success"></i>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="col-xl-4 col-md-6 mb-4">
+                                        <div class="card border-left-success shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Ford Focus</div>
+                                                        <div class="h5 mb-0 font-weight-bold text-gray-800">ABC1234</div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-check-circle fa-2x text-success"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
-                            </div>
 
                             </div>
                         </div>
