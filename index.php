@@ -30,14 +30,13 @@ if(isset($_SESSION['ADMIN']['USER'])) {
      * New
      */
     $router->group("New");
-    $router->get('/Gallery', 'Novo:Gallery');
-    $router->get('/Capture', 'Novo:Capturar');
+    $router->get('/Gallery/{id}', 'Novo:Gallery');
+    $router->get('/Capture/{id}', 'Novo:Capturar');
 } else {
     $router->group(null);
     $router->get('/', 'App:Home');
     $router->get('/Home', 'App:Home');
     $router->get('/Login', 'App:Login');
-
 }
 
 /*
@@ -57,6 +56,12 @@ $router->post("/Dashboard/Info", "Dashboard:Info");
 */
 $router->post("/Session/Login", "Session:Login");
 $router->post("/Session/Logout", "Session:LogOut");
+
+/**
+ * @return Produto
+ * @group WS
+ */
+$router-> post("/Produto/Create", "Produto:Create");
 
 /*
 * Erro

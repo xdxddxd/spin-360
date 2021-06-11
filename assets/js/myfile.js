@@ -1,5 +1,6 @@
 var controllerapi = "https://localhost/spin-360/WS",
-  logo = "https://localhost/spin-360/assets/Icons/favicon.png";
+    logo = "https://localhost/spin-360/assets/Icons/favicon.png",
+    URL_BASE = "https://localhost/spin-360";
 
 async function createNotification(title, message, id) {
   if (document.getElementById(id)) {
