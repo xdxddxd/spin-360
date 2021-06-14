@@ -1,3 +1,11 @@
+window.onresize = function(){
+  if(window.innerHeight > window.innerWidth){
+    $('.alterar-celular').show();
+  } else {
+    $('.alterar-celular').hide();
+  }
+};
+
 var btnCount = 0, atual_pic = 0, total_pic = 0, pins = [], pinCount = 0;
 
 async function popover(pin, option) {

@@ -1,5 +1,23 @@
 <link rel="stylesheet" href="<?php echo URL_BASE; ?>/assets/themes/css/Mobile.css">
 <div class="Mobile">
+
+  <div class="alterar-celular">
+    <center>
+      <h1>Por Favor !</h1>
+      <h2>Vire o Seu Dispositivo</h2>
+      <div class="sidebar-brand-icon rotate-n-15" style="font-size: 50px;">
+        <i class="fas fa-mobile-alt"></i>
+      </div>
+      <hr>
+      <p>
+        Com a tela virada será mais eficiente fazer esta parte do projeto !
+      </p>
+      <small>
+        Infelizmente isso é obrigatório !!!
+      </small>
+    </center>
+  </div>
+
   <div class="uploaders" style="display: none;">
     <label for="upext">Externo</label>
     <input type="file" accept="video/*" id="upext" />

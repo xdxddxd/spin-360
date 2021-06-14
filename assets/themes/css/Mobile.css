@@ -174,3 +174,19 @@
    border-left: 20px solid transparent;
    border-right: 20px solid transparent; 
 }
+
+.alterar-celular {
+	display: flex;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center;
+
+	background-color:  rgba(0, 0, 0, 0.8);
+	color: white;
+
+	z-index: 9999999;
+}

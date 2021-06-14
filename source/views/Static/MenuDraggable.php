@@ -15,7 +15,7 @@
 
         cursor: pointer;
 
-        z-index: 99999;
+        z-index: 99999999;
     }
 
     .draggable-menu .icon {
