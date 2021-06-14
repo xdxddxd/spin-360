@@ -20,8 +20,8 @@ splash {
  z-index: 16777271;
 }
 .logo {
- max-width: 100vw;
- margin: 150px auto 50px auto;
+ max-width: 80vw;
+ margin: 80px auto 50px auto;
  font-size: 50px;
  text-shadow: -1px 2px 2px #000;
  text-align: center;
@@ -86,7 +86,7 @@ splash {
 
  <div class = "preload" id = "preload">
   <div class ="logo">
-   <img src="<?php echo URL_BASE; ?>/assets/img/logo.png" alt="Tabacaria Delivery" class="logo">
+   <img src="<?php echo URL_BASE; ?>/assets/Icons/favicon.png" alt="Spin360 Carview" class="logo">
   </div>
    <div class = "loader-frame">
     <div class = "loader1" id = "loader1"></div>
