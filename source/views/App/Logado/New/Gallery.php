@@ -21,13 +21,21 @@
                     <fieldset class="row" id="nav-gallery">
                         <legend>Galeria</legend>
                         <div id="uploaded-files"></div>
-                        <div class="upload-area">
+                        <!-- <div class="upload-area">
                             Solte o Arquivo Aqui
-                        </div>
+                        </div> -->
                     </fieldset>
 
                 </div>
 
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <form onsubmit="return false;" enctype="multipart/form-data">
+                        <label for="files" class="btn btn-success btn-block"><i class="fas fa-camera"></i> Adicionar Foto</label>
+                        <input type="file" id="files" style="display: none;" multiple>
+                    </form>
+                </div>
             </div>
 
         </div>

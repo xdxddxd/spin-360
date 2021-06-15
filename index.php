@@ -63,6 +63,12 @@ $router->post("/Session/Logout", "Session:LogOut");
  */
 $router-> post("/Produto/Create", "Produto:Create");
 
+/**
+ * @return Output
+ * @group WS
+ */
+$router->post("/Output/Picture", "Output:Picture");
+
 /*
 * Erro
 */

@@ -72,9 +72,4 @@ class Perfil
                }
           }
      }
-
-     public function PassUpdate($data)
-     {
-          # code...
-     }
 }
