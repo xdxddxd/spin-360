@@ -21,9 +21,9 @@
                     <fieldset class="row" id="nav-gallery">
                         <legend>Galeria</legend>
                         <div id="uploaded-files"></div>
-                        <!-- <div class="upload-area">
+                        <div class="upload-area">
                             Solte o Arquivo Aqui
-                        </div> -->
+                        </div>
                     </fieldset>
 
                 </div>
