@@ -71,3 +71,21 @@ jQuery(document).ready(function ($) {
         $('#files').val("");
     });
 });
+
+async function alterImage(id){
+    $.ajax({
+        url: controllerapi + '/Output/Image/Update',
+        dataType: 'json',
+        type: 'post',
+        data: {
+            id: id
+        },
+        success: async (response) => {
+            if(response.code) {
+                $('#alterImageForm').modal('show');
+            } else {
+                createNotification(response.title, response.message, response.id);
+            }
+        }
+    })
+}

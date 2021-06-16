@@ -13,6 +13,7 @@ class Novo{
     {
 
         $pics = (new Archive())->find("id_produto = :idprd", "idprd={$data['id']}");
+        $_SESSION['pics'] = $pics->fetch(true);
 
         require __DIR__."/../views/Static/Head.php";
         require __DIR__."/../views/Static/SplashScreen.php";

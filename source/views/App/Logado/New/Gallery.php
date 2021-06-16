@@ -22,9 +22,9 @@
                         <legend>Galeria</legend>
                         <div id="uploaded-files">
                             <?php
-                                for ($i=0; $i < $pics->count(); $i++) { 
-                                    echo $i;
-                                }
+                            foreach ($_SESSION['pics'] as $pic) {
+                                echo '<img src="' . $pic->url . '" class="uploaded-image" alt="Uploaded Image" onclick="alterImage(' . $pic->id . ')">';
+                            }
                             ?>
                         </div>
                         <label for="files" class="upload-area">
@@ -47,4 +47,32 @@
 
     </div>
 
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="alterImageForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Atualizar Dados da Imagem</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                    <div class="form-group">
+                        <label for="title">Titulo</label>
+                        <input type="text" class="form-control" id="title" placeholder="Porta Malas">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Descrição</label>
+                        <textarea class="form-control" id="description" placeholder="Está em perfeito estado e ainda carrega muita bagagem . . ."></textarea>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" onclick="saveNow()">Salvar</button>
+            </div>
+        </div>
+    </div>
 </div>
