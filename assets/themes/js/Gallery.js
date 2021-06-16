@@ -22,31 +22,7 @@ jQuery(document).ready(function ($) {
 
         for (i = 0; i < files.length; i++) {
             formData.append('file', files[i]);
-
-            $.ajax({
-                url: controllerapi + '/Output/Picture',
-                method: 'POST',
-                dataType: 'json',
-                data: formData,
-                processData: false,
-                contentType: false,
-                success: async (response) => {
-                    $('#uploaded-files').append(response.message)
-                }
-            });
-
-            formData.delete('file');
-        }
-
-        delete formData, files;
-    })
-
-    $('#files').on('change', function (event) {
-        var formData = new FormData();
-        var files = $("#files")[0].files;
-
-        for (i = 0; i < files.length; i++) {
-            formData.append('file', files[i]);
+            formData.append('prdid', $('#id-prd').val());
 
             $.ajax({
                 url: controllerapi + '/Output/Picture',
@@ -61,6 +37,34 @@ jQuery(document).ready(function ($) {
             });
 
             formData.delete('file');
+            formData.delete('prdid');
+        }
+
+        delete formData, files;
+    })
+
+    $('#files').on('change', function (event) {
+        var formData = new FormData();
+        var files = $("#files")[0].files;
+
+        for (i = 0; i < files.length; i++) {
+            formData.append('file', files[i]);
+            formData.append('prdid', $('#id-prd').val());
+
+            $.ajax({
+                url: controllerapi + '/Output/Picture',
+                type: "POST",
+                dataType: 'json',
+                data: formData,
+                processData: false, // tell jQuery not to process the data
+                contentType: false, // tell jQuery not to set contentType
+                success: async (response) => {
+                    $('#uploaded-files').append(response.message)
+                },
+            });
+
+            formData.delete('file');
+            formData.delete('prdid');
         }
 
         delete formData, files;

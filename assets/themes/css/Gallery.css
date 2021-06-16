@@ -5,6 +5,10 @@ fieldset {
 }
 
 .upload-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border: 2px dashed #777;
     height: 350px;
     width: 100%;

@@ -2,6 +2,8 @@
 
 namespace Source\Controllers;
 
+use Source\Models\Archive;
+
 class Novo{
 
     /**
@@ -9,6 +11,9 @@ class Novo{
      */
     public function Gallery($data)
     {
+
+        $pics = (new Archive())->find("id_produto = :idprd", "idprd={$data['id']}");
+
         require __DIR__."/../views/Static/Head.php";
         require __DIR__."/../views/Static/SplashScreen.php";
         require __DIR__."/../views/Static/Menu.php";

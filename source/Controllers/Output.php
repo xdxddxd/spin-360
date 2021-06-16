@@ -2,6 +2,7 @@
 
 namespace Source\Controllers;
 
+use Source\Models\Archive;
 use Source\Models\Imagem;
 
 class Output
@@ -9,9 +10,11 @@ class Output
 
     public function Picture($data)
     {
+
+        
         $image = new Imagem();
         $files = $_FILES;
-
+        
         if (!empty($files["file"])) {
             $file = $files["file"];
 
@@ -45,12 +48,26 @@ class Output
                             break;
                     }
 
-                    echo json_encode([
-                        "code" => true,
-                        "title" => "Imagem Atualizada !",
-                        "message" => "<img src='" . URL_BASE . '/assets/uploads/images/' . date('Y') . '/' . date('m') . '/' . $imgName . $ext . "' class='uploaded-image' alt='Profile Picture'>",
-                        "id" => uniqid()
-                    ]);
+                    $picItem = new Archive();
+                    $picItem->sequencia = (new Archive())->find("id_produto = :idprd", "idprd={$data['prdid']}")->count();
+                    $picItem->url = URL_BASE . '/assets/uploads/images/' . date('Y') . '/' . date('m') . '/' . $imgName . $ext;
+                    $picItem->id_produto = $data['prdid'];
+
+                    if($picItem->save()){
+                        echo json_encode([
+                            "code" => true,
+                            "title" => "Imagem Atualizada !",
+                            "message" => "<img src='" . URL_BASE . '/assets/uploads/images/' . date('Y') . '/' . date('m') . '/' . $imgName . $ext . "' class='uploaded-image' alt='Uploaded Image'>",
+                            "id" => uniqid()
+                        ]);
+                    } else {
+                        echo json_encode([
+                            "code" => false,
+                            "title" => "Erro !",
+                            "message" => $picItem->fail()->getMessage(),
+                            "id" => uniqid()
+                        ]);
+                    }
                 } else {
                     echo json_encode([
                         "code" => false,

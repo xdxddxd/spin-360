@@ -17,25 +17,30 @@
             <div class="row">
 
                 <div class="col-md-12">
-                    
+
                     <fieldset class="row" id="nav-gallery">
                         <legend>Galeria</legend>
-                        <div id="uploaded-files"></div>
-                        <div class="upload-area">
-                            Solte o Arquivo Aqui
+                        <div id="uploaded-files">
+                            <?php
+                                for ($i=0; $i < $pics->count(); $i++) { 
+                                    echo $i;
+                                }
+                            ?>
                         </div>
+                        <label for="files" class="upload-area">
+                            <div>
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <div>
+                                Clique ou Solte o Arquivo Aqui
+                            </div>
+                        </label>
+                        <input type="file" id="files" style="display: none;" multiple>
+                        <input type="text" id="id-prd" value="<?php echo $data['id'] ?>" disabled style="display: none;">
                     </fieldset>
 
                 </div>
 
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <form onsubmit="return false;" enctype="multipart/form-data">
-                        <label for="files" class="btn btn-success btn-block"><i class="fas fa-camera"></i> Adicionar Foto</label>
-                        <input type="file" id="files" style="display: none;" multiple>
-                    </form>
-                </div>
             </div>
 
         </div>
