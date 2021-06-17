@@ -68,6 +68,8 @@ $router-> post("/Produto/Create", "Produto:Create");
  * @group WS
  */
 $router->post("/Output/Picture", "Output:Picture");
+$router->post("/Output/Image/Update/Get", "Output:PictureGet");
+$router->post("/Output/Image/Update", "Output:PictureUpdate");
 
 /*
 * Erro

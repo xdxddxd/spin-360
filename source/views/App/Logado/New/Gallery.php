@@ -60,18 +60,19 @@
                 </button>
             </div>
             <div class="modal-body">
-                    <div class="form-group">
-                        <label for="title">Titulo</label>
-                        <input type="text" class="form-control" id="title" placeholder="Porta Malas">
-                    </div>
-                    <div class="form-group">
-                        <label for="description">Descrição</label>
-                        <textarea class="form-control" id="description" placeholder="Está em perfeito estado e ainda carrega muita bagagem . . ."></textarea>
-                    </div>
+                <input type="text" id="idimg" disabled style="display: none;">
+                <div class="form-group">
+                    <label for="title">Titulo</label>
+                    <input type="text" class="form-control" id="title" placeholder="Porta Malas">
+                </div>
+                <div class="form-group">
+                    <label for="description">Descrição</label>
+                    <textarea class="form-control" id="description" placeholder="Está em perfeito estado e ainda carrega muita bagagem . . ."></textarea>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-success" onclick="saveNow()">Salvar</button>
+                <button type="button" class="btn btn-success" onclick="SaveNewInfo()">Salvar</button>
             </div>
         </div>
     </div>

@@ -11,10 +11,10 @@ class Output
     public function Picture($data)
     {
 
-        
+
         $image = new Imagem();
         $files = $_FILES;
-        
+
         if (!empty($files["file"])) {
             $file = $files["file"];
 
@@ -53,7 +53,7 @@ class Output
                     $picItem->url = URL_BASE . '/assets/uploads/images/' . date('Y') . '/' . date('m') . '/' . $imgName . $ext;
                     $picItem->id_produto = $data['prdid'];
 
-                    if($picItem->save()){
+                    if ($picItem->save()) {
                         echo json_encode([
                             "code" => true,
                             "title" => "Imagem Atualizada !",
@@ -77,6 +77,64 @@ class Output
                     ]);
                 }
             }
+        }
+    }
+
+    public function PictureGet($data)
+    {
+
+        $title = '';
+        $description = '';
+
+        $img = new Archive();
+        $i = $img->findById($data['id']);
+        if ($i) {
+            $title = $i->nome;
+            $id = $i->id;
+            $description = $i->legenda;
+
+            echo json_encode([
+                "code" => true,
+                "title" => "Imagem Encontrada !",
+                "message" => "Abrindo Edição !",
+                "id" => uniqid(),
+                "img" => [
+                    "title" => $title,
+                    "description" => $description,
+                    "id" => $id
+                ]
+            ]);
+        } else {
+            echo json_encode([
+                "code" => false,
+                "title" => "Erro !",
+                "message" => "Imagem não Encontrada !",
+                "id" => uniqid()
+            ]);
+        }
+    }
+
+    public function PictureUpdate($data)
+    {
+        $img = new Archive();
+        $img->findById($data['id']);
+        $img->nome = $data['nome'];
+        $img->legenda = $data['legenda'];
+
+        if ($img->save()) {
+            echo json_encode([
+                "code" => true,
+                "title" => "Sucesso !",
+                "message" => "Informações Salvas com sucesso!",
+                "id" => uniqid(),
+            ]);
+        } else {
+            echo json_encode([
+                "code" => false,
+                "title" => "Erro !",
+                "message" => $img->fail()->getMessage(),
+                "id" => uniqid()
+            ]);
         }
     }
 }

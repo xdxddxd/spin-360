@@ -74,7 +74,7 @@ jQuery(document).ready(function ($) {
 
 async function alterImage(id){
     $.ajax({
-        url: controllerapi + '/Output/Image/Update',
+        url: controllerapi + '/Output/Image/Update/Get',
         dataType: 'json',
         type: 'post',
         data: {
@@ -83,6 +83,32 @@ async function alterImage(id){
         success: async (response) => {
             if(response.code) {
                 $('#alterImageForm').modal('show');
+
+                $('#idimg').val(response.img.id)
+                $('#title').val(response.img.title);
+                $('#description').val(response.img.description);
+
+            } else {
+                createNotification(response.title, response.message, response.id);
+            }
+        }
+    })
+}
+
+async function SaveNewInfo(){
+    $.ajax({
+        url: controllerapi + '/Output/Image/Update',
+        dataType: 'json',
+        type: 'post',
+        data: {
+            id: $('#idimg').val(),
+            nome: $('#title').val(),
+            legenda: $('#description').val()
+        },
+        success: async (response) => {
+            if(response.code) {
+                $('#alterImageForm').modal('hide');
+                createNotification(response.title, response.message, response.id);
             } else {
                 createNotification(response.title, response.message, response.id);
             }
