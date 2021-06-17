@@ -137,4 +137,14 @@ class Output
             ]);
         }
     }
+
+    public function SpinExt($data)
+    {
+        var_dump($data);
+    }
+
+    public function SpinInt($data)
+    {
+        var_dump($data);
+    }
 }

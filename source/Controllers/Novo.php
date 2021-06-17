@@ -11,8 +11,9 @@ class Novo{
      */
     public function Gallery($data)
     {
+        unset($_SESSION['pics']);
 
-        $pics = (new Archive())->find("id_produto = :idprd", "idprd={$data['id']}");
+        $pics = (new Archive())->find("id_produto = :idprd", "idprd={$data['id']}")->order("sequencia");
         $_SESSION['pics'] = $pics->fetch(true);
 
         require __DIR__."/../views/Static/Head.php";

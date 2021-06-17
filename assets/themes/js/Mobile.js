@@ -310,7 +310,7 @@ function extractFramesExt() {
     formData.append("file", jpegFile);
 
     $.ajax({
-      url: "https://localhost/uploader-spin/WS/Uploader",
+      url: controllerapi + "/Output/Spin/Externo",
       type: "POST",
       dataType: 'json',
       data: formData,
@@ -345,7 +345,7 @@ function extractFramesExt() {
         imgExt.className += `imgExt${i}`;
         imgExt.className += ` imgExt`;
         imgExt.id = 'imgExt';
-        // uploadImage(imgExt, `Int${i}.jpg`);
+        uploadImage(imgExt, `Int${i}.jpg`);
         document.getElementById('deg-externo').appendChild(imgExt);
 
         //wheelzoom(document.querySelector(`img.img${i}`));
@@ -423,7 +423,7 @@ function extractFramesInt() {
     formData.append("file", jpegFile);
 
     $.ajax({
-      url: "https://localhost/uploader-spin/WS/Uploader",
+      url: controllerapi + "/Output/Spin/Interno",
       type: "POST",
       dataType: 'json',
       data: formData,

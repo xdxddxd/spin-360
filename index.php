@@ -71,6 +71,9 @@ $router->post("/Output/Picture", "Output:Picture");
 $router->post("/Output/Image/Update/Get", "Output:PictureGet");
 $router->post("/Output/Image/Update", "Output:PictureUpdate");
 
+$router->post("/Output/Spin/Externo", "Output:SpinExt");
+$router->post("/Output/Spin/Interno", "Output:SpinInt");
+
 /*
 * Erro
 */
