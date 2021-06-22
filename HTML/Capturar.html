@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<link rel="icon" href="./Icons/favicon.png">
+
+<!-- Manifest -->
+<link rel="manifest" href="manifest.json">
+
+<!-- META -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#4285f4">
+
+<meta name="description" content="Gerenciar uma tabacaria é fácil com este site.">
+<!-- FIM DOS META -->
+
+<!-- LINKS DOS CSS'S -->
+
+<link href="./vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<!-- Bootstrap Style -->
+<link rel="stylesheet" type="text/css" href="./css/tabacaria-bootstrap.min.css">
+
+<!-- My Style -->
+<link rel="stylesheet" type="text/css" href="./css/mycss.css">
+
+<!-- FIM DOS LINKS DOS CSS'S -->
+
+<head>
+	<title>Spin 360</title>
+</head>
+
+<body id="page-top">
+
+<!-- Bootstrap core JavaScript-->
+<script src="./vendor/jquery/jquery.min.js"></script>
+<script src="./js/jquery-ui.min.js"></script>
+<script src="./js/jquery-ui-touch-punch.min.js"></script>
+<script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Arquivo criado por mim mesmo -->
+<script src="./js/myfile.js"></script>
+
+    <!-- Menu Init -->
+
+    <style>
+      .draggable-menu {
+          position: fixed;
+  
+          left: 90vw;
+          top: 1vh;
+  
+          width: 50px;
+          height: 50px;
+  
+          background-color: rgba(0, 0, 0, .5);
+  
+          border-radius: 25%;
+          padding: 10px;
+  
+          cursor: pointer;
+  
+          z-index: 99999999;
+      }
+  
+      .draggable-menu .icon {
+          padding: 5px;
+          width: 30px;
+          height: 30px;
+  
+          border-radius: 50%;
+  
+          background-color: rgba(0, 0, 0, .5);
+          color: white;
+          font-size: 17px;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+      }
+  
+      .switable-menu {
+          display: flex;
+          justify-content: space-arround;
+      }
+  
+      .switable-menu img {
+          width: 70px;
+      }
+  
+      .switable-menu a {
+          margin-left: 10px;
+      }
+  
+      .upp {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+  </style>
+  
+  <!-- Logout Modal-->
+  <div class="modal fade" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+              <div class="modal-header" id="staticBackdropLabel">
+                  <h5>
+                      Menu
+                  </h5>
+                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+  
+                  <div class="switable-menu">
+                      <a href="./Dashboard.html" class="title">
+                          <img src="./Icons/favicon.png" alt="Logo">
+                      </a>
+                      <a href="./Dashboard.html" role="button" class="btn btn-primary">
+                          <i class="fas fa-home"></i>
+                          Home
+                      </a>
+                      <a href="./Novo.html" role="button" class="btn btn-primary">
+                          <i class="fas fa-plus-circle"></i>
+                          Nova Captura
+                      </a>
+                  </div>
+  
+                  <hr>
+  
+                  <div class="upp">
+  
+                      <div id="progressExt">
+                          <button class="btn btn-danger" onclick="$('#upext').click()">
+                              <i class="fas fa-unlock"></i>
+                              Externo Faltando
+                          </button>
+                      </div>
+  
+                      <div id="progressInt">
+                          <button class="btn btn-danger" onclick="$('#upint').click()">
+                              <i class="fas fa-unlock"></i>
+                              Interno Faltando
+                          </button>
+                      </div>
+  
+                  </div>
+  
+                  <hr>
+  
+                  <center>
+                      <button onclick="modal('externo')" class="btn-add-pins-externo btn-add-pins btn-pins-inactive btn btn-success"> <i class="fas fa-plus-circle"></i> Adicionar Pin Externo</button>
+                      <button onclick="modal('interno')" class="btn-add-pins-interno btn-add-pins btn-pins-inactive btn btn-success"> <i class="fas fa-plus-circle"></i> Adicionar Pin Interno</button>
+                  </center>
+              </div>
+              <div class="modal-footer">
+                  <button class="btn btn-danger" type="button" data-dismiss="modal">Fechar Menu</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <div class="draggable-menu" onclick="$('#menuModal').modal('toggle')">
+      <div class="icon">
+          <i class="fas fa-bars"></i>
+      </div>
+  </div>
+  
+  <script>
+      $(`.draggable-menu`).draggable();
+  
+      $(`.draggable-menu`).draggable({
+          containment: `html`,
+          revert: `invalid`,
+          snap: `html`
+      });
+  
+      $(`html`).droppable({
+          classes: {
+              "ui-droppable-active": "ui-state-active",
+              "ui-droppable-hover": "ui-state-hover"
+          }
+      });
+  </script>
+
+    <!-- Menu End -->
+
+
+    <!-- Code Init -->
+
+
+    <link rel="stylesheet" href="./css/Mobile.css">
+    <div class="Mobile">
+    
+      <div class="alterar-celular">
+        <center>
+          <h1>Por Favor !</h1>
+          <h2>Vire o Seu Dispositivo</h2>
+          <div class="sidebar-brand-icon rotate-n-15" style="font-size: 50px;">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <hr>
+          <p>
+            Com a tela virada será mais eficiente fazer esta parte do projeto !
+          </p>
+          <small>
+            Infelizmente isso é obrigatório !!!
+          </small>
+        </center>
+      </div>
+    
+      <div class="uploaders" style="display: none;">
+        <label for="upext">Externo</label>
+        <input type="file" accept="video/*" id="upext" />
+        <label for="upint">Interno</label>
+        <input type="file" accept="video/*" id="upint" />
+      </div>
+      <div class="options" id="options" style="display: none;">
+        <div class="pill-options">
+          <div class="option left btn-externo" onclick="showOptions('externo')">Externo</div>
+          <div class="option right btn-interno" onclick="showOptions('interno')">Interno</div>
+        </div>
+      </div>
+      <div class="center">
+        <div id="pins-externo" class="pins-externo pins-inactive" style="position: absolute;"></div>
+        <div class="deg-externo deg-inactive" id="deg-externo"></div>
+        <div id="pins-interno" class="pins-interno pins-inactive" style="position: absolute;"></div>
+        <div class="deg-interno deg-inactive" id="deg-interno"></div>
+      </div>
+    </div>
+    
+    <div class="modal" style="display: none;">
+      <div class="modal-inside">
+        <center>
+          <h3>Adicionar Pin !</h3>
+        </center>
+        <hr>
+    
+        <hr>
+        <input type="button" value="Fechar" onclick="$('.modal').hide()">
+      </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="addPinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addPinModalCenterTitle">Adicionar Pin</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="pins-form">
+    
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="./js/360deg.js"></script>
+    <script src="./js/Blob.js"></script>
+    <script src="./js/wheelzoom.js"></script>
+    <script src="./js/Mobile.js"></script>
+    
+    <script>
+      setInterval(() => {
+        //location.reload();
+      }, 2000)
+    </script>
+
+    <!-- Code End -->
+
+<!-- FOOTER //ATUALMENTE INDISPONIVEL -->
+<footer></footer>
+<!-- FIM DO FOOTER -->
+
+<div id="notification"></div>
+
+<!-- INICIO DOS SCRIPTS -->
+
+<!-- Site Scripts -->
+
+<!-- Core plugin JavaScript-->
+<script src="./vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="./js/tabacaria-bootstrap.min.js"></script>
+
+<!-- Animation JS -->
+<script type="text/javascript" src="./js/wow.min.js"></script>
+<!--script type="text/javascript" src="./js/popper.min.js"></script-->
+<script>
+    new WOW().init();
+</script>
+
+<!-- FIM DOS SCRIPTS -->
+
+</body>
+<!-- FIM DO BODY -->
+
+</html>

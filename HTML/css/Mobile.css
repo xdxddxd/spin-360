@@ -1,0 +1,192 @@
+.center {
+	position: absolute;
+	width: 100%;
+}
+
+.center img {
+	display: flex;
+	margin: auto;
+
+	width: 100%;
+}
+
+.options {
+	position: absolute;
+
+	z-index: 998;
+}
+
+.pill-options {
+	width: auto;
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.option {
+	display: block;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 15%;
+	background-color:  rgba(0, 0, 0, 0.5);
+	color: white;
+	line-height: 0;
+
+	cursor: pointer;
+	transition: all .5s;
+	
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgba(0, 0, 0, 0.5);
+}
+
+/* .option:hover {
+	background-color:  rgba(255, 255, 255, 1);
+	color: black;
+} */
+
+.option.btn-active {
+	background-color:  rgba(255, 255, 255, 1);
+	color: black;
+}
+
+.right {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.left {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.deg-inactive {
+	display: none;
+}
+
+.deg-active {
+	display: block !important;
+}
+
+.pins-inactive {
+	display: none;
+}
+
+.pins-active {
+	display: block !important;
+}
+
+.btn-pins-inactive {
+	display: none;
+}
+
+.btn-pins-active {
+	display: block !important;
+}
+
+/* PINS */
+.pin-recurso {
+	color: #ffffff;
+	background-color: cyan;
+
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+
+	font-weight: bold;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 50%;
+
+	position: relative;
+
+	width: 20px;
+	height: 20px;
+
+	max-width: 20px;
+	max-height: 20px;
+
+	font-size: 24px;
+	cursor: pointer;
+
+	z-index: 999;
+}
+
+.pin-recurso:hover{
+	background-color: teal;
+}
+
+.pin-avaria {
+	color: #ffffff;
+	background-color: darkorange;
+
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+
+	font-weight: bold;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 50%;
+
+	position: relative;
+
+	width: 20px;
+	height: 20px;
+
+	max-width: 20px;
+	max-height: 20px;
+
+	font-size: 24px;
+	cursor: pointer;
+
+	z-index: 999;
+}
+
+.pin-avaria:hover{
+	background-color: darkgoldenrod;
+}
+
+/* POPOVER */
+
+.popover {
+    padding: 10px;
+    position: fixed;
+	border-radius: 25px 25px 25px 0px;
+
+	text-align: center;
+
+	z-index: 99999;
+
+	background: white;
+	border-color: white;	
+}
+.popover:after {
+	text-align: center;
+    content: "";
+    position: absolute;
+   top: 100%;
+   left: 0%;
+   border-top: 20px solid blue;
+   border-top-color: inherit; 
+   border-left: 20px solid transparent;
+   border-right: 20px solid transparent; 
+}
+
+.alterar-celular {
+	display: flex;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center;
+
+	background-color:  rgba(0, 0, 0, 0.8);
+	color: white;
+
+	z-index: 9999999;
+}

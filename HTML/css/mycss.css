@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* Geral */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: lightgray;
+    background-image: url('../img/archives/bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    font-family: 'Courier Prime', monospace !important;
+}
+
+#notification{
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+}
+
+#notification img{
+    width: 10%;
+}
