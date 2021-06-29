@@ -1,4 +1,7 @@
 jQuery(document).ready(function ($) {
+    if(!window.localStorage.getItem(`${$('#id-prd').val()}-Gallery-Index`)) {
+        window.localStorage.setItem(`${$('#id-prd').val()}-Gallery-Index`, 0);
+    }
     $('.upload-area').on('dragover', function (event) {
         event.preventDefault();
         event.stopPropagation();
@@ -24,17 +27,28 @@ jQuery(document).ready(function ($) {
             formData.append('file', files[i]);
             formData.append('prdid', $('#id-prd').val());
 
-            $.ajax({
-                url: controllerapi + '/Output/Picture',
-                type: "POST",
-                dataType: 'json',
-                data: formData,
-                processData: false, // tell jQuery not to process the data
-                contentType: false, // tell jQuery not to set contentType
-                success: async (response) => {
-                    $('#uploaded-files').append(response.message)
-                },
-            });
+
+            window.localStorage.setItem(`${$('#id-prd').val()}-Gallery-Index`, (parseInt(window.localStorage.getItem(`${$('#id-prd').val()}-Gallery-Index`)) + 1));
+
+            //console.log(getDataUrl(files[i]))
+
+            var canvas = document.createElement('canvas');
+            var ctx = canvas.getContext("2d");
+            var dataURL = canvas.toDataURL('image/jpeg',files[i]);
+            
+            window.localStorage.setItem(`${$('#id-prd').val()}-${window.localStorage.getItem(`${$('#id-prd').val()}-Gallery-Index`)}-Gallery`, dataURL.replace(/^data:image\/(png|jpg);base64,/, ""));
+
+            // $.ajax({
+            //     url: controllerapi + '/Output/Picture',
+            //     type: "POST",
+            //     dataType: 'json',
+            //     data: formData,
+            //     processData: false, // tell jQuery not to process the data
+            //     contentType: false, // tell jQuery not to set contentType
+            //     success: async (response) => {
+            //         $('#uploaded-files').append(response.message)
+            //     },
+            // });
 
             formData.delete('file');
             formData.delete('prdid');
@@ -115,3 +129,19 @@ async function SaveNewInfo(){
         }
     })
 }
+
+async function saveLocalStorage (id, type, index, data) {
+    window.localStorage.setItem(id+'|'+type+'|'+index, JSON.stringify(data));
+}
+
+function getDataUrl(img) {
+    // Create canvas
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    // Set width and height
+    canvas.width = img.width;
+    canvas.height = img.height;
+    // Draw the image
+    ctx.drawImage(img, 0, 0);
+    return canvas.toDataURL('image/jpeg');
+ }
